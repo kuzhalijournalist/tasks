@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Parrot Layout Page</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 1px solid black;
+            height: 50px;
+        }
+
+        .header {
+            height: 150px;
+        }
+
+        .nav {
+            background-color: #556B2F; /* olive green */
+            height: 50px;
+        }
+
+        .content {
+            height: 500px;
+            text-align: center;
+        }
+
+        .content img {
+            max-height: 400px;
+            margin-top: 20px;
+        }
+
+        .footer {
+            background-color: #2F4F6F; /* dark blue */
+            height: 50px;
+        }
+
+        .side {
+            width: 15%;
+        }
+
+        .main {
+            width: 70%;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <!-- Header -->
+        <tr class="header">
+            <td></td>
+            <td>
+                <table style="width:100%; height:100%; border-collapse: collapse;">
+                    <tr><td></td></tr>
+                    <tr><td></td></tr>
+                    <tr><td></td></tr>
+                    <tr><td></td></tr>
+                </table>
+            </td>
+            <td></td>
+        </tr>
+
+        <!-- Navigation -->
+        <tr class="nav">
+            <td colspan="3"></td>
+        </tr>
+
+        <!-- Content Area -->
+        <tr class="content">
+            <td class="side"></td>
+            <td class="main">
+                <img src="parrot.png" alt="Colorful Parrots">
+            </td>
+            <td class="side"></td>
+        </tr>
+
+        <!-- Footer -->
+        <tr class="footer">
+            <td colspan="3"></td>
+        </tr>
+    </table>
+</body>
+</html>

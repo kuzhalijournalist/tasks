@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Media Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>🎥 Media Gallery</h1>
+    <p>Explore our favorite videos and image moments</p>
+  </header>
+
+  <main>
+
+    <section class="images">
+      <h2>📸 Photo Highlights</h2>
+      <div class="media-block">
+        <img src="https://source.unsplash.com/300x200/?nature" alt="Nature" />
+        <img src="https://source.unsplash.com/300x200/?technology" alt="Tech" />
+        <img src="https://source.unsplash.com/300x200/?college" alt="Campus" />
+      </div>
+    </section>
+
+    <section class="videos">
+      <h2>🎬 Featured Videos</h2>
+      <div class="media-block">
+        <!-- YouTube iframe embed -->
+        <iframe width="360" height="215" src="https://www.youtube.com/embed/tgbNymZ7vqY" 
+          title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+          gyroscope; picture-in-picture; web-share" allowfullscreen>
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+  color: #222;
+  padding: 20px;
+  text-align: center;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 2.2rem;
+}
+
+main h2 {
+  margin-bottom: 15px;
+  color: #004080;
+}
+
+.media-block {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+iframe {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Footer */
+footer {
+  margin-top: 50px;
+  padding: 15px;
+  font-size: 14px;
+  color: #555;
+  background-color: #e0e0e0;
+}

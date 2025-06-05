@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Three Image Boxes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="box box1">
+      <div class="overlay">
+        <h2>Box One</h2>
+        <p>Beautiful handcrafted jewelry.</p>
+        <a href="#" class="btn">Explore</a>
+      </div>
+    </div>
+
+    <div class="box box2">
+      <div class="overlay">
+        <h2>Box Two</h2>
+        <p>Modern designs with a timeless touch.</p>
+        <a href="#" class="btn">Discover</a>
+      </div>
+    </div>
+
+    <div class="box box3">
+      <div class="overlay">
+        <h2>Box Three</h2>
+        <p>Elegant pieces for every moment.</p>
+        <a href="#" class="btn">Shop Now</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container Layout */
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Box Styling */
+.box {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  border: 2px solid #ddd;
+  margin: 10px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-family: 'Segoe UI', sans-serif;
+  transition: transform 0.3s ease;
+}
+
+/* Specific Backgrounds */
+.box1 {
+  background-image: url('https://source.unsplash.com/300x400/?jewelry,1');
+}
+.box2 {
+  background-image: url('https://source.unsplash.com/300x400/?jewelry,2');
+}
+.box3 {
+  background-image: url('https://source.unsplash.com/300x400/?jewelry,3');
+}
+
+/* Overlay Content */
+.overlay {
+  position: relative;
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+}
+
+/* Headings and Text */
+.overlay h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 2px black;
+}
+
+.overlay p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* Button Styling */
+.btn {
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: #ff6600;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #cc5200;
+}
+
+/* Display & Overflow */
+.box:hover {
+  transform: scale(1.05);
+  overflow: hidden;
+}
+
+/* Pseudo-elements for box decoration */
+.box::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  border: 3px dashed transparent;
+  transition: border-color 0.4s;
+}
+
+.box:hover::after {
+  border-color: white;
+}
+
+/* Placeholder styling (for practice) */
+input::placeholder {
+  color: gray;
+  font-style: italic;
+}
+
+/* Anchor Styling Practice */
+a:visited {
+  color: #ccc;
+}
+
+a:focus {
+  outline: 2px dashed yellow;
+}
